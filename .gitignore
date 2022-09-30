@@ -108,4 +108,8 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/intellij
 
+
 *.idea/
+
+__pycache__/
+
