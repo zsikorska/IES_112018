@@ -50,7 +50,7 @@ public class WeatherStarter {
                 logger.info( "- predicted wind direction is " + firstDay.getPredWindDir());
 
             } else {
-                logger.error( "No results for this request!");
+                logger.info( "No results for this request!");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
