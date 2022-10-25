@@ -19,9 +19,12 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @GetMapping("/employees")
-    public List<Employee> getAllEmployees(){
-        return employeeRepository.findAll();
+
+    @GetMapping(value = "/employees")
+    public List<Employee> getEmployeeByEmail(@RequestParam(required = false) String email){
+        if(email == null)
+            return employeeRepository.findAll();
+        return employeeRepository.findByEmailId(email);
     }
 
     @GetMapping("/employees/{id}")
